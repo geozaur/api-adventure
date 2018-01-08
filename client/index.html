@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The API Adventure</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="header">
+		<center>
+			<h>The API Adventure<h>
+		</center>
+	</div>
+	<div id="container">
+		<div id="location-panel">	
+			<center>
+				<label for="current-key">Current key</label>
+				<input id="current-key" type="text"/>
+				<label for="location-select">Choose where to go</label>
+				<select id="location-select">
+					<option value="intro">Intro</option>
+					<option value="tavern">Tavern</option>
+					<option value="dungeon">Dungeon</option>
+					<option value="castle">Castle</option>
+				</select>
+			</center>
+		</div>
+
+		<div class="mid-v">
+			<div class="screen" id="welcome-screen">
+				<p class="mid-h">
+					Welcome to The API Adventure!
+				</p>
+				<p class="mid-h">
+					Enter below your name to start the game!
+				</p>
+				<div class="mid-h">
+					<input id="player-name-input" type="text" class="mid-h" />
+					<br>
+					<button id="start-game-btn">Begin</button>
+				</div>
+			</div>
+
+			<div class="screen" id="story-screen">
+				<button id="left-btn" class="left btn btn-big"><</button>
+				<button id="right-btn" class="right btn btn-big">></button>
+
+				<p class="mid-h" id="text-area"></p>
+
+				<div id="placeholder-container" class="small-container">
+					<div style="word-wrap: break-word;">
+						<p class="mid-h" class="placeholder" id="key">KEY</p>
+					</div>
+					<p class="mid-h" class="placeholder" id="hint">HINT</p>
+					<p class="mid-h" class="placeholder" id="warning">WARNING</p>
+				</div>
+				
+				<center>
+					<div id="choice-container" class="small-container mid-h">
+					</div>
+				</center>
+
+			</div>
+
+			<div class="screen" id="error-screen">
+				<p id="error-message" class="mid-h">
+					An error occured!
+				</p>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
