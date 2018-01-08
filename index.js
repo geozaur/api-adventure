@@ -9,8 +9,6 @@ const app = express();
 
 // Utility
 
-let inventory = {};
-
 function verifyKeyFor(chapter){
     return (req, res, next) => {
         let key = req.headers.key;
@@ -76,6 +74,7 @@ app.post('/', (req, res) => {
     });
 });
 
+
 // Chapter 0
 
 app.use(verifyKeyFor('tavern'));
@@ -92,6 +91,7 @@ app.post('/dungeon', story.dungeon.post);
 
 app.use(verifyKeyFor('castle'));
 app.get('/castle', story.castle.get);
+
 
 // Start the server
 

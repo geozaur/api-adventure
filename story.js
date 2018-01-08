@@ -1,3 +1,8 @@
+const jwt = require('jsonwebtoken');
+const config = require('./config');
+
+let inventory = {};
+
 module.exports = {
     chapters: [
         'tavern',
